@@ -1,4 +1,4 @@
-// Ats.cpp : DLL アプリケーション用のエントリ ポイントを定義します。
+// Ats.cpp : DLL 繧｢繝励Μ繧ｱ繝ｼ繧ｷ繝ｧ繝ｳ逕ｨ縺ｮ繧ｨ繝ｳ繝医Μ 繝昴う繝ｳ繝医ｒ螳夂ｾｩ縺励∪縺吶�
 //
 
 #include "stdafx.h"
@@ -45,7 +45,7 @@ ATS_API ATS_HANDLES WINAPI Elapse(ATS_VEHICLESTATE vehicleState, int *panel, int
 	{
 		g_output.Reverser = 0;
 	}
-	// 保安ブレーキ
+	// 菫晏ｮ峨ヶ繝ｬ繝ｼ繧ｭ
 	if (GetKeyState(0x10) & 0x8000 && key_2) {
 		safty_Brake_key = true;
 	}
@@ -63,7 +63,7 @@ ATS_API ATS_HANDLES WINAPI Elapse(ATS_VEHICLESTATE vehicleState, int *panel, int
 		}
 	}
 	if (safty_Brake) {
-		g_output.Brake = 7;
+		g_output.Brake = g_emgBrake + 1;
 		if (g_reverser == 0 || g_brakeNotch == g_emgBrake) {
 			g_output.Reverser = 0;
 		}

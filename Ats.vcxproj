@@ -101,7 +101,11 @@
   <ItemGroup>
     <ClInclude Include="hoan_brake.h" />
     <ClInclude Include="atsplugin.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="hoan_brake.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

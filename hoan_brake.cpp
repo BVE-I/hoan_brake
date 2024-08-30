@@ -63,7 +63,7 @@ ATS_API ATS_HANDLES WINAPI Elapse(ATS_VEHICLESTATE vehicleState, int *panel, int
 		}
 	}
 	if (safty_Brake) {
-		g_output.Brake = 7;
+		g_output.Brake = g_emgBrake + 1;
 		if (g_reverser == 0 || g_brakeNotch == g_emgBrake) {
 			g_output.Reverser = 0;
 		}
